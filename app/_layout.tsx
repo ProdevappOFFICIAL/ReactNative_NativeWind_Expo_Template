@@ -51,9 +51,10 @@ const theme = vars({
 function RootLayoutNav() {
   return (
     <View style={[theme, StyleSheet.absoluteFill]}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: "modal" }} />
+      <Stack screenOptions={{
+        headerShown: false
+      }}>
+        <Stack.Screen  name="(tabs)" options={{ headerShown: false }} />
       </Stack>
     </View>
   );

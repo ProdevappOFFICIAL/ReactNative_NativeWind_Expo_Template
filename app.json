@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "nativewind-expo-router",
-    "slug": "nativewind-expo-router",
+    "slug": "food-delivery",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -25,12 +25,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "server",
-      "favicon": "./assets/images/favicon.png"
+      },
+      "package": "com.prutotech.fooddelivery"
     },
     "plugins": [
       "expo-router",
@@ -49,7 +45,11 @@
     "extra": {
       "router": {
         "origin": false
+      },
+      "eas": {
+        "projectId": "05738f2d-33b3-49bd-8faf-a2fd62c35276"
       }
-    }
+    },
+    "owner": "prince734"
   }
 }
