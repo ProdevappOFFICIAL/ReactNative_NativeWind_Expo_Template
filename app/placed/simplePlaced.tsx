@@ -20,56 +20,45 @@ const SimplePlaced = () => {
 
       {/* Top View (Floating Over Map) */}
       <View style={[styles.overlayBox, styles.topBox]} className="rounded-full">
-     <View className="flex flex-row w-full items-center gap-4 px-4"> 
-     <Ionicons name="car-sport" size={24} color="black" />
-    <Text className="text-2xl font-bold">
-       Futa SouthGate, Akure
-    </Text>
-    <View className="flex-1"/>
-    <Text className="text-2xl font-bold">
-    30mins
-    </Text>
-     </View>
+        <View className="flex flex-row w-full items-center gap-4 px-4">
+          <Ionicons name="car-sport" size={24} color="black" />
+          <Text className="text-2xl font-bold">Futa SouthGate, Akure</Text>
+          <View className="flex-1" />
+          <Text className="text-2xl font-bold">30mins</Text>
+        </View>
       </View>
 
       {/* Bottom View (Floating Over Map) */}
-      <View style={[styles.overlayBox, styles.bottomBox]} className="rounded-lg">
+      <View
+        style={[styles.overlayBox, styles.bottomBox]}
+        className="rounded-lg"
+      >
         <View className="flex flex-col items-center w-full h-full gap-6 py-4">
-        <View className="flex flex-row w-full items-center gap-4 px-4"> 
-        <AntDesign name="user" size={24} color="black" />
-    <Text className="text-2xl font-bold">
-       Salem Nyaris
-    </Text>
-    <View className="flex-1"/>
-  <View className="flex flex-row items-center">
-        <AntDesign name="star" size={24} color="green" /> 
-         <Text className="text-2xl font-bold">
-  4.7
-    </Text>
-    </View>
-   
-     </View>
+          <View className="flex flex-row w-full items-center gap-4 px-4">
+            <AntDesign name="user" size={24} color="black" />
+            <Text className="text-2xl font-bold">Salem Nyaris</Text>
+            <View className="flex-1" />
+            <View className="flex flex-row items-center">
+              <AntDesign name="star" size={24} color="green" />
+              <Text className="text-2xl font-bold">4.7</Text>
+            </View>
+          </View>
 
-     <View className="flex flex-row  w-full items-center gap-4 px-4"> 
-   
-   <TouchableOpacity>
-       <Text className="flex  text-2xl items-center font-bold px-10 py-2  bg-green-600 text-white rounded-full">
-    Call
-    </Text>
-   </TouchableOpacity>
- 
-    <View className="flex-1"/>
-    <TouchableOpacity>
-         <Text className="text-2xl font-bold px-10 py-2 bg-gray-300/20 text-center rounded-full">
-    Message
-    </Text>
-    </TouchableOpacity>
-   
-     </View>
+          <View className="flex flex-row  w-full items-center gap-4 px-4">
+            <TouchableOpacity>
+              <Text className="flex  text-2xl items-center font-bold px-10 py-2  bg-green-600 text-white rounded-full">
+                Call
+              </Text>
+            </TouchableOpacity>
 
+            <View className="flex-1" />
+            <TouchableOpacity>
+              <Text className="text-2xl font-bold px-10 py-2 bg-gray-300/20 text-center rounded-full">
+                Message
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
-
- 
       </View>
     </View>
   );
