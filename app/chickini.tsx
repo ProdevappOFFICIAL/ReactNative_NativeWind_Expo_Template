@@ -51,7 +51,7 @@ const Chickini = () => {
               </TouchableOpacity>
             </View>
           </View>
-          <View>
+          <View className="max-h-[500px]">
             <Food />
           </View>
           <View className="flex flex-row w-[200px]  items-center justify-between bg-white shadow-md px-10 py-4 rounded-full">

@@ -32,7 +32,7 @@ const Food4 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <View className="flex items-center max-h-[600px]">
+    <View className="flex items-center max-h-[350px]">
       <FlatList
         ref={flatListRef}
         data={images}
@@ -52,7 +52,7 @@ const Food4 = () => {
           <View className="w-screen items-center justify-center">
             <Image
               source={{ uri: item.uri }}
-              className="w-[500px] h-[500px] rounded-full"
+              className="w-[250px] h-[250px] rounded-full"
             />
             <Text className="text-3xl font-bold p-5">
               {item.name} - {item.prize}

@@ -78,7 +78,6 @@ const TabOneScreen = () => {
           <View className="flex flex-row items-center justify-between rounded-md shadow-">
             <Text className="text-3xl font-bold">Resturants</Text>
             <View className="flex flex-row items-center">
-              
               <Text className="text-xl">See all</Text>
               <Entypo name="chevron-right" size={24} color="black" />
             </View>
@@ -91,112 +90,119 @@ const TabOneScreen = () => {
           className="flex flex-col gap-y-4"
           showsVerticalScrollIndicator={false}
         >
-          <View className="flex items-center justify-center bg-white blur shadow-md rounded-md mx-10   ">
+          <View className="flex items-center justify-center bg-white blur shadow-md rounded-md mx-10 w-fit  max-w-[500px] ">
             <Image
               className="flex w-full h-[200px] rounded-t-md backdrop-filter backdrop-blur-3xl bg-opacity-10"
               source={{
                 uri: "data:image/jpeg;base64,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",
               }}
             />
+            <View className="w-full px-4">
+              <View className="flex flex-col p-4">
+                <Text className="text-xl font-bold">Chickini Monie</Text>
 
-            <TouchableOpacity onPress={() => router.push("/chickini")}>
-              <View className="flex flex-col  mx-4 w-full p-4 ">
-                <Text className="text-3xl font-bold">Chickini Monie</Text>
-                <View className="flex flex-row items-center">
-                  <Text className="text-xl text-gray-600">Burger</Text>
+                {/* Food categories - now with flex-wrap */}
+                <View className="flex flex-row flex-wrap items-center">
+                  <Text className="text-base text-gray-600">Burger</Text>
                   <Octicons
                     name="dot-fill"
-                    className="m-2"
                     size={14}
                     color="green"
+                    className="mx-1"
                   />
-                  <Text className="text-xl text-gray-600">Chickin Wings </Text>
-                  <Octicons
-                    name="dot-fill"
-                    className="m-2"
-                    size={14}
-                    color="green"
-                  />
-                  <Text className="text-xl text-gray-600">Pounded Yam </Text>
-                  <Octicons
-                    name="dot-fill"
-                    className="m-2"
-                    size={14}
-                    color="green"
-                  />
-                  <Text className="text-xl text-gray-600">Rice and Beans </Text>
 
+                  <Text className="text-base text-gray-600">Chickin Wings</Text>
                   <Octicons
                     name="dot-fill"
-                    className="m-2"
                     size={14}
                     color="green"
+                    className="mx-1"
                   />
-                </View>
-              </View>
-              <View className="flex flex-row  mx-4 items-center justify-between p-4 ">
-                <View className="flex flex-row items-center">
-                  <AntDesign
-                    name="star"
-                    size={24}
+
+                  <Text className="text-base text-gray-600">Pounded Yam</Text>
+                  <Octicons
+                    name="dot-fill"
+                    size={14}
                     color="green"
-                    className="p-2"
+                    className="mx-1"
                   />
-                  <AntDesign
-                    name="star"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <AntDesign
-                    name="star"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <AntDesign
-                    name="star"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <AntDesign
-                    name="staro"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <Text className=" text-gray-600 font-bold text-xl mr-1">
-                    4.0
+
+                  <Text className="text-base text-gray-600">
+                    Rice and Beans
                   </Text>
                   <Octicons
                     name="dot-fill"
-                    className="p-2"
-                    size={15}
+                    size={14}
                     color="green"
+                    className="mx-1"
                   />
-                  <View className="flex flex-row items-center px-2 py-1  ml-3 gap-2">
-                    <FontAwesome6 name="truck-fast" size={20} color="green" />
-                    <Text className=" text-gray-600 text-xl ml-2">
-                      20min
-                    </Text>
-                  </View>
-                  <Octicons
-                    name="dot-fill"
-                    className="p-2"
-                    size={15}
-                    color="green"
-                  />
-
-                  <View className="flex flex-row items-center px-2 py-1  ml-3 gap-2">
-                    <Ionicons name="location" size={24} color="green" />
-                    <Text className=" text-gray-600 text-xl ml-2">
-                      SouthGate
-                    </Text>
-                  </View>
                 </View>
               </View>
-            </TouchableOpacity>
+
+              {/* Ratings and info section - now with flex-wrap */}
+              <View className="flex flex-row flex-wrap items-center p-4">
+                {/* Stars section */}
+                <View className="flex flex-row items-center mb-2 mr-4">
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="staro"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <Text className="text-gray-600 font-bold text-base">4.0</Text>
+                </View>
+
+                {/* Delivery time section */}
+                <View className="flex flex-row items-center mb-2 mr-4">
+                  <Octicons
+                    name="dot-fill"
+                    size={12}
+                    color="green"
+                    className="mr-2"
+                  />
+                  <FontAwesome6 name="truck-fast" size={18} color="green" />
+                  <Text className="text-gray-600 text-base ml-1">20min</Text>
+                </View>
+
+                {/* Location section */}
+                <View className="flex flex-row items-center mb-2">
+                  <Octicons
+                    name="dot-fill"
+                    size={12}
+                    color="green"
+                    className="mr-2"
+                  />
+                  <Ionicons name="location" size={20} color="green" />
+                  <Text className="text-gray-600 text-base ml-1">
+                    SouthGate
+                  </Text>
+                </View>
+              </View>
+            </View>
           </View>
 
           <View className="flex items-center justify-center bg-white blur shadow-md rounded-md mx-10 mt-10   ">
@@ -207,100 +213,109 @@ const TabOneScreen = () => {
               }}
             />
             <TouchableOpacity onPress={() => router.push("/simple")}>
-              <View className="flex flex-col  mx-4 w-full p-4 ">
-                <Text className="text-3xl font-bold">Simple Eateries</Text>
-                <View className="flex flex-row items-center">
-                  <Text className="text-xl text-gray-600">Burger</Text>
-                  <Octicons
-                    name="dot-fill"
-                    className="m-2"
-                    size={14}
-                    color="green"
-                  />
-                  <Text className="text-xl text-gray-600">Chickin Wings </Text>
-                  <Octicons
-                    name="dot-fill"
-                    className="m-2"
-                    size={14}
-                    color="green"
-                  />
-                  <Text className="text-xl text-gray-600">Pounded Yam </Text>
-                  <Octicons
-                    name="dot-fill"
-                    className="m-2"
-                    size={14}
-                    color="green"
-                  />
-                  <Text className="text-xl text-gray-600">Rice and Beans </Text>
+              {/* Restaurant name and food categories */}
+              <View className="flex flex-col w-full p-4">
+                <Text className="text-2xl font-bold">Simple Eateries</Text>
 
+                {/* Food categories with flex-wrap */}
+                <View className="flex flex-row flex-wrap items-center mt-1">
+                  <Text className="text-base text-gray-600">Burger</Text>
                   <Octicons
                     name="dot-fill"
-                    className="m-2"
                     size={14}
                     color="green"
+                    className="mx-1"
                   />
-                </View>
-              </View>
-              <View className="flex flex-row  mx-4 items-center justify-between p-4 ">
-                <View className="flex flex-row items-center">
-                  <AntDesign
-                    name="star"
-                    size={24}
+
+                  <Text className="text-base text-gray-600">Chickin Wings</Text>
+                  <Octicons
+                    name="dot-fill"
+                    size={14}
                     color="green"
-                    className="p-2"
+                    className="mx-1"
                   />
-                  <AntDesign
-                    name="star"
-                    size={24}
+
+                  <Text className="text-base text-gray-600">Pounded Yam</Text>
+                  <Octicons
+                    name="dot-fill"
+                    size={14}
                     color="green"
-                    className="p-2"
+                    className="mx-1"
                   />
-                  <AntDesign
-                    name="star"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <AntDesign
-                    name="staro"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <AntDesign
-                    name="staro"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <Text className=" text-gray-600 font-bold text-xl mr-1">
-                    3.8
+
+                  <Text className="text-base text-gray-600">
+                    Rice and Beans
                   </Text>
                   <Octicons
                     name="dot-fill"
-                    className="p-2"
-                    size={15}
+                    size={14}
                     color="green"
+                    className="mx-1"
                   />
-                  <View className="flex flex-row items-center px-2 py-1  ml-3 gap-2">
-                    <FontAwesome6 name="truck-fast" size={20} color="green" />
-                    <Text className=" text-gray-600 text-xl ml-2">
-                      30min
-                    </Text>
-                  </View>
+                </View>
+              </View>
+
+              {/* Ratings and additional info */}
+              <View className="flex flex-row flex-wrap items-center p-4">
+                {/* Stars section */}
+                <View className="flex flex-row items-center mb-2 mr-4">
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="staro"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="staro"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <Text className="text-gray-600 font-bold text-base">3.8</Text>
+                </View>
+
+                {/* Delivery time section */}
+                <View className="flex flex-row items-center mb-2 mr-4">
                   <Octicons
                     name="dot-fill"
-                    className="p-2"
-                    size={15}
+                    size={12}
                     color="green"
+                    className="mr-2"
                   />
+                  <FontAwesome6 name="truck-fast" size={18} color="green" />
+                  <Text className="text-gray-600 text-base ml-1">30min</Text>
+                </View>
 
-                  <View className="flex flex-row items-center px-2 py-1  ml-3 gap-2">
-                    <Ionicons name="location" size={24} color="green" />
-                    <Text className=" text-gray-600 text-xl ml-2">
-                      SouthGate
-                    </Text>
-                  </View>
+                {/* Location section */}
+                <View className="flex flex-row items-center mb-2">
+                  <Octicons
+                    name="dot-fill"
+                    size={12}
+                    color="green"
+                    className="mr-2"
+                  />
+                  <Ionicons name="location" size={20} color="green" />
+                  <Text className="text-gray-600 text-base ml-1">
+                    SouthGate
+                  </Text>
                 </View>
               </View>
             </TouchableOpacity>
@@ -315,100 +330,109 @@ const TabOneScreen = () => {
             />
 
             <TouchableOpacity onPress={() => router.push("/chicken")}>
-              <View className="flex flex-col  mx-4 w-full p-4 ">
-                <Text className="text-3xl font-bold">Chicken Republic</Text>
-                <View className="flex flex-row items-center">
-                  <Text className="text-xl text-gray-600">Burger</Text>
-                  <Octicons
-                    name="dot-fill"
-                    className="m-2"
-                    size={14}
-                    color="green"
-                  />
-                  <Text className="text-xl text-gray-600">Chickin Wings </Text>
-                  <Octicons
-                    name="dot-fill"
-                    className="m-2"
-                    size={14}
-                    color="green"
-                  />
-                  <Text className="text-xl text-gray-600">Pounded Yam </Text>
-                  <Octicons
-                    name="dot-fill"
-                    className="m-2"
-                    size={14}
-                    color="green"
-                  />
-                  <Text className="text-xl text-gray-600">Rice and Beans </Text>
+              {/* Restaurant name and food categories */}
+              <View className="flex flex-col w-full p-4">
+                <Text className="text-2xl font-bold">Chicken Republic</Text>
 
+                {/* Food categories with flex-wrap */}
+                <View className="flex flex-row flex-wrap items-center mt-1">
+                  <Text className="text-base text-gray-600">Burger</Text>
                   <Octicons
                     name="dot-fill"
-                    className="m-2"
                     size={14}
                     color="green"
+                    className="mx-1"
                   />
-                </View>
-              </View>
-              <View className="flex flex-row  mx-4 items-center justify-between p-4 ">
-                <View className="flex flex-row items-center">
-                  <AntDesign
-                    name="star"
-                    size={24}
+
+                  <Text className="text-base text-gray-600">Chickin Wings</Text>
+                  <Octicons
+                    name="dot-fill"
+                    size={14}
                     color="green"
-                    className="p-2"
+                    className="mx-1"
                   />
-                  <AntDesign
-                    name="star"
-                    size={24}
+
+                  <Text className="text-base text-gray-600">Pounded Yam</Text>
+                  <Octicons
+                    name="dot-fill"
+                    size={14}
                     color="green"
-                    className="p-2"
+                    className="mx-1"
                   />
-                  <AntDesign
-                    name="star"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <AntDesign
-                    name="star"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <AntDesign
-                    name="star"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <Text className=" text-gray-600 font-bold text-xl mr-1">
-                    4.8
+
+                  <Text className="text-base text-gray-600">
+                    Rice and Beans
                   </Text>
                   <Octicons
                     name="dot-fill"
-                    className="p-2"
-                    size={15}
+                    size={14}
                     color="green"
+                    className="mx-1"
                   />
-                  <View className="flex flex-row items-center px-2 py-1  ml-3 gap-2">
-                    <FontAwesome6 name="truck-fast" size={20} color="green" />
-                    <Text className=" text-gray-600 text-xl ml-2">
-                      60min
-                    </Text>
-                  </View>
+                </View>
+              </View>
+
+              {/* Ratings and additional info */}
+              <View className="flex flex-row flex-wrap items-center p-4">
+                {/* Stars section */}
+                <View className="flex flex-row items-center mb-2 mr-4">
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <Text className="text-gray-600 font-bold text-base">4.8</Text>
+                </View>
+
+                {/* Delivery time section */}
+                <View className="flex flex-row items-center mb-2 mr-4">
                   <Octicons
                     name="dot-fill"
-                    className="p-2"
-                    size={15}
+                    size={12}
                     color="green"
+                    className="mr-2"
                   />
+                  <FontAwesome6 name="truck-fast" size={18} color="green" />
+                  <Text className="text-gray-600 text-base ml-1">60min</Text>
+                </View>
 
-                  <View className="flex flex-row items-center px-2 py-1  ml-3 gap-2">
-                    <Ionicons name="location" size={24} color="green" />
-                    <Text className=" text-gray-600 text-xl ml-2">
-                      SouthGate
-                    </Text>
-                  </View>
+                {/* Location section */}
+                <View className="flex flex-row items-center mb-2">
+                  <Octicons
+                    name="dot-fill"
+                    size={12}
+                    color="green"
+                    className="mr-2"
+                  />
+                  <Ionicons name="location" size={20} color="green" />
+                  <Text className="text-gray-600 text-base ml-1">
+                    SouthGate
+                  </Text>
                 </View>
               </View>
             </TouchableOpacity>
@@ -422,100 +446,109 @@ const TabOneScreen = () => {
               }}
             />
             <TouchableOpacity onPress={() => router.push("/starbucks")}>
-              <View className="flex flex-col  mx-4 w-full p-4 ">
-                <Text className="text-3xl font-bold">Star Bucks</Text>
-                <View className="flex flex-row items-center">
-                  <Text className="text-xl text-gray-600">Burger</Text>
-                  <Octicons
-                    name="dot-fill"
-                    className="m-2"
-                    size={14}
-                    color="green"
-                  />
-                  <Text className="text-xl text-gray-600">Chickin Wings </Text>
-                  <Octicons
-                    name="dot-fill"
-                    className="m-2"
-                    size={14}
-                    color="green"
-                  />
-                  <Text className="text-xl text-gray-600">Pounded Yam </Text>
-                  <Octicons
-                    name="dot-fill"
-                    className="m-2"
-                    size={14}
-                    color="green"
-                  />
-                  <Text className="text-xl text-gray-600">Rice and Beans </Text>
+              {/* Restaurant name and food categories */}
+              <View className="flex flex-col w-full p-4">
+                <Text className="text-2xl font-bold">Star Bucks</Text>
 
+                {/* Food categories with flex-wrap */}
+                <View className="flex flex-row flex-wrap items-center mt-1">
+                  <Text className="text-base text-gray-600">Burger</Text>
                   <Octicons
                     name="dot-fill"
-                    className="m-2"
                     size={14}
                     color="green"
+                    className="mx-1"
                   />
-                </View>
-              </View>
-              <View className="flex flex-row  mx-4 items-center justify-between p-4 ">
-                <View className="flex flex-row items-center">
-                  <AntDesign
-                    name="star"
-                    size={24}
+
+                  <Text className="text-base text-gray-600">Chickin Wings</Text>
+                  <Octicons
+                    name="dot-fill"
+                    size={14}
                     color="green"
-                    className="p-2"
+                    className="mx-1"
                   />
-                  <AntDesign
-                    name="star"
-                    size={24}
+
+                  <Text className="text-base text-gray-600">Pounded Yam</Text>
+                  <Octicons
+                    name="dot-fill"
+                    size={14}
                     color="green"
-                    className="p-2"
+                    className="mx-1"
                   />
-                  <AntDesign
-                    name="star"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <AntDesign
-                    name="star"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <AntDesign
-                    name="star"
-                    size={24}
-                    color="green"
-                    className="p-2"
-                  />
-                  <Text className=" text-gray-600 font-bold text-xl mr-1">
-                    5.0
+
+                  <Text className="text-base text-gray-600">
+                    Rice and Beans
                   </Text>
                   <Octicons
                     name="dot-fill"
-                    className="p-2"
-                    size={15}
+                    size={14}
                     color="green"
+                    className="mx-1"
                   />
-                  <View className="flex flex-row items-center px-2 py-1  ml-3 gap-2">
-                    <FontAwesome6 name="truck-fast" size={20} color="green" />
-                    <Text className=" text-gray-600 text-xl ml-2">
-                      60min
-                    </Text>
-                  </View>
+                </View>
+              </View>
+
+              {/* Ratings and additional info */}
+              <View className="flex flex-row flex-wrap items-center p-4">
+                {/* Stars section */}
+                <View className="flex flex-row items-center mb-2 mr-4">
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <AntDesign
+                    name="star"
+                    size={20}
+                    color="green"
+                    className="mr-1"
+                  />
+                  <Text className="text-gray-600 font-bold text-base">5.0</Text>
+                </View>
+
+                {/* Delivery time section */}
+                <View className="flex flex-row items-center mb-2 mr-4">
                   <Octicons
                     name="dot-fill"
-                    className="p-2"
-                    size={15}
+                    size={12}
                     color="green"
+                    className="mr-2"
                   />
+                  <FontAwesome6 name="truck-fast" size={18} color="green" />
+                  <Text className="text-gray-600 text-base ml-1">60min</Text>
+                </View>
 
-                  <View className="flex flex-row items-center px-2 py-1  ml-3 gap-2">
-                    <Ionicons name="location" size={24} color="green" />
-                    <Text className=" text-gray-600 text-xl ml-2">
-                      NorthGate
-                    </Text>
-                  </View>
+                {/* Location section */}
+                <View className="flex flex-row items-center mb-2">
+                  <Octicons
+                    name="dot-fill"
+                    size={12}
+                    color="green"
+                    className="mr-2"
+                  />
+                  <Ionicons name="location" size={20} color="green" />
+                  <Text className="text-gray-600 text-base ml-1">
+                    NorthGate
+                  </Text>
                 </View>
               </View>
             </TouchableOpacity>
